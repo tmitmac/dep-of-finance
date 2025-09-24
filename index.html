@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square Country - Department of Finance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #1d4ed8 100%);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .transition-smooth {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <div class="w-10 h-10 rounded-md bg-blue-600 flex items-center justify-center">
+                            <i data-feather="dollar-sign" class="text-white"></i>
+                        </div>
+                        <span class="ml-3 text-xl font-bold text-gray-900">Square Finance</span>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                        <a href="index.html" class="border-blue-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Home</a>
+                        <a href="general-services.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Services</a>
+                        <a href="general-services.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Resources</a>
+                        <a href="#" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">About</a>
+                        <a href="#" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+
+
+                <div class="hidden sm:ml-6 sm:flex sm:items-center">
+                           <!-- Citizen Portal Button -->
+<a href="login.html" 
+   class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-smooth">
+   Citizen Portal
+</a>
+                </div>
+                <div class="-mr-2 flex items-center sm:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-gradient text-white">
+        <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+            <div class="text-center" data-aos="fade-up">
+                <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+                    Square Country Department of Finance
+                </h1>
+                <p class="mt-6 max-w-lg mx-auto text-xl">
+                    Managing the financial resources of Square Country with transparency, efficiency, and innovation.
+                </p>
+                <div class="mt-10 flex justify-center space-x-4">
+                    <a href="#" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-blue-700 bg-white hover:bg-gray-50">
+                        Pay Taxes
+                    </a>
+                    <a href="#" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-800 bg-opacity-60 hover:bg-opacity-70">
+                        Financial Reports
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <div class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center" data-aos="fade-up">
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Services</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Our Financial Services
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    Comprehensive financial services for citizens and businesses of Square Country.
+                </p>
+            </div>
+
+            <div class="mt-20">
+                <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
+                    <!-- Tax Services -->
+                    <div class="bg-gray-50 p-8 rounded-xl card-hover transition-smooth" data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                            <i data-feather="file-text"></i>
+                        </div>
+                        <div class="mt-5">
+                            <h3 class="text-lg font-medium text-gray-900">Tax Services</h3>
+                            <p class="mt-2 text-base text-gray-500">
+                                File and pay your taxes online with our secure portal. Get assistance with tax forms and calculations.
+                            </p>
+                        </div>
+                        <div class="mt-6">
+                            <a href="#" class="text-base font-medium text-blue-600 hover:text-blue-500">
+                                Learn more <span aria-hidden="true">→</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Budget & Spending -->
+                    <div class="bg-gray-50 p-8 rounded-xl card-hover transition-smooth" data-aos="fade-up" data-aos-delay="200">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                            <i data-feather="pie-chart"></i>
+                        </div>
+                        <div class="mt-5">
+                            <h3 class="text-lg font-medium text-gray-900">Budget & Spending</h3>
+                            <p class="mt-2 text-base text-gray-500">
+                                Explore how Square Country allocates its budget and track government spending.
+                            </p>
+                        </div>
+                        <div class="mt-6">
+                            <a href="#" class="text-base font-medium text-blue-600 hover:text-blue-500">
+                                Learn more <span aria-hidden="true">→</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Business Services -->
+                    <div class="bg-gray-50 p-8 rounded-xl card-hover transition-smooth" data-aos="fade-up" data-aos-delay="300">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                            <i data-feather="briefcase"></i>
+                        </div>
+                        <div class="mt-5">
+                            <h3 class="text-lg font-medium text-gray-900">Business Services</h3>
+                            <p class="mt-2 text-base text-gray-500">
+                                Register your business, file corporate taxes, and access financial incentives.
+                            </p>
+                        </div>
+                        <div class="mt-6">
+                            <a href="#" class="text-base font-medium text-blue-600 hover:text-blue-500">
+                                Learn more <span aria-hidden="true">→</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stats Section -->
+    <div class="bg-blue-700">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8 lg:py-20">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-extrabold text-white sm:text-4xl" data-aos="fade-up">
+                    Square Country by the Numbers
+                </h2>
+                <p class="mt-3 text-xl text-blue-200" data-aos="fade-up" data-aos-delay="100">
+                    Key financial metrics that demonstrate our fiscal responsibility
+                </p>
+            </div>
+            <div class="mt-10 text-center sm:max-w-3xl sm:mx-auto sm:grid sm:grid-cols-3 sm:gap-8">
+                <div class="p-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center justify-center w-16 h-16 mx-auto rounded-full bg-blue-600">
+                        <i data-feather="dollar-sign" class="text-white"></i>
+                    </div>
+                    <div class="mt-6 text-4xl font-bold text-white">₴42.8B</div>
+                    <div class="mt-2 text-sm font-medium text-blue-200">Annual Budget</div>
+                </div>
+                <div class="p-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center justify-center w-16 h-16 mx-auto rounded-full bg-blue-600">
+                        <i data-feather="trending-down" class="text-white"></i>
+                    </div>
+                    <div class="mt-6 text-4xl font-bold text-white">2.1%</div>
+                    <div class="mt-2 text-sm font-medium text-blue-200">Deficit Reduction</div>
+                </div>
+                <div class="p-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="flex items-center justify-center w-16 h-16 mx-auto rounded-full bg-blue-600">
+                        <i data-feather="users" class="text-white"></i>
+                    </div>
+                    <div class="mt-6 text-4xl font-bold text-white">98%</div>
+                    <div class="mt-2 text-sm font-medium text-blue-200">Tax Compliance</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- News Section -->
+    <div class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center mb-12" data-aos="fade-up">
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">News & Updates</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Latest Financial News
+                </p>
+            </div>
+
+            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <!-- News Item 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover transition-smooth" data-aos="fade-up" data-aos-delay="100">
+                    <img class="h-48 w-full object-cover" src="http://static.photos/finance/640x360/1" alt="Finance news">
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span>June 15, 2023</span>
+                            <span class="mx-1">•</span>
+                            <span>Press Release</span>
+                        </div>
+                        <a href="#" class="block mt-2">
+                            <h3 class="text-xl font-semibold text-gray-900">New Tax Incentives for Small Businesses</h3>
+                            <p class="mt-3 text-base text-gray-500">
+                                The Department announces new tax breaks for small businesses to stimulate economic growth.
+                            </p>
+                        </a>
+                        <div class="mt-4">
+                            <a href="#" class="text-base font-medium text-blue-600 hover:text-blue-500">
+                                Read more
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News Item 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover transition-smooth" data-aos="fade-up" data-aos-delay="200">
+                    <img class="h-48 w-full object-cover" src="http://static.photos/technology/640x360/2" alt="Digital transformation">
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span>June 10, 2023</span>
+                            <span class="mx-1">•</span>
+                            <span>Announcement</span>
+                        </div>
+                        <a href="#" class="block mt-2">
+                            <h3 class="text-xl font-semibold text-gray-900">Digital Transformation of Tax Services</h3>
+                            <p class="mt-3 text-base text-gray-500">
+                                Our new online portal makes filing taxes easier than ever with AI-powered assistance.
+                            </p>
+                        </a>
+                        <div class="mt-4">
+                            <a href="#" class="text-base font-medium text-blue-600 hover:text-blue-500">
+                                Read more
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News Item 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover transition-smooth" data-aos="fade-up" data-aos-delay="300">
+                    <img class="h-48 w-full object-cover" src="http://static.photos/construction/640x360/3" alt="Infrastructure investment">
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span>June 5, 2023</span>
+                            <span class="mx-1">•</span>
+                            <span>Report</span>
+                        </div>
+                        <a href="#" class="block mt-2">
+                            <h3 class="text-xl font-semibold text-gray-900">$2B Infrastructure Investment Plan</h3>
+                            <p class="mt-3 text-base text-gray-500">
+                                Breakdown of how the new infrastructure budget will be allocated across Square Country.
+                            </p>
+                        </a>
+                        <div class="mt-4">
+                            <a href="#" class="text-base font-medium text-blue-600 hover:text-blue-500">
+                                Read more
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center" data-aos="fade-up">
+                <a href="#" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700">
+                    View All News
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">Services</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="#" class="text-base text-gray-400 hover:text-white">Tax Services</a></li>
+                        <li><a href="#" class="text-base text-gray-400 hover:text-white">Business Services</a></li>
+                        <li><a href="#" class="text-base text-gray-400 hover:text-white">Financial Reports</a></li>
+                        <li><a href="#" class="text-base text-gray-400 hover:text-white">Budget Information</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">Resources</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="#" class="text-base text-gray-400 hover:text-white">Forms & Documents</a></li>
+                        <li><a href="#" class="text-base text-gray-400 hover:text-white">Financial Data</a></li>
+                        <li><a href="#" class="text-base text-gray-400 hover:text-white">Policies</a></li>
+                        <li><a href="#" class="text-base text-gray-400 hover:text-white">FAQs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">About</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="#" class="text-base text-gray-400 hover:text-white">Our Mission</a></li>
+                        <li><a href="#" class="text-base text-gray-400 hover:text-white">Leadership</a></li>
+                        <li><a href="#" class="text-base text-gray-400 hover:text-white">Careers</a></li>
+                        <li><a href="#" class="text-base text-gray-400 hover:text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">Connect</h3>
+                    <div class="mt-4 flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-feather="twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-feather="facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-feather="linkedin"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-feather="youtube"></i>
+                        </a>
+                    </div>
+                    <div class="mt-8">
+                        <h4 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">Subscribe</h4>
+                        <div class="mt-4 flex">
+                            <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-md w-full focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-r-md">
+                                <i data-feather="send"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between">
+                <p class="text-base text-gray-400">
+                    &copy; 2023 Square Country Department of Finance. All rights reserved.
+                </p>
+                <div class="mt-4 md:mt-0 flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        feather.replace();
+    </script>
+</body>
+</html>

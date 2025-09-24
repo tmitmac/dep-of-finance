@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tax Records</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-green-700 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <div class="flex items-center">
+          <div class="w-10 h-10 rounded-md bg-green-600 flex items-center justify-center text-white">
+            <i data-feather="file-text"></i>
+          </div>
+          <span class="ml-3 text-xl font-bold text-white">Tax Records</span>
+        </div>
+        <div>
+          <a href="login.html" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md text-sm font-medium">
+            Logout
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Tax Records Section -->
+  <div class="max-w-4xl mx-auto mt-10 bg-white shadow-md rounded-lg p-8">
+    <h2 class="text-2xl font-bold text-gray-900 mb-6">Your Tax Records</h2>
+
+    <ul id="taxList" class="space-y-4">
+      <!-- Tax records will populate here -->
+    </ul>
+
+    <p id="noRecords" class="text-gray-600 text-center mt-4 hidden">No tax records available.</p>
+  </div>
+
+  <script>
+    // Predefined tax records for each citizen
+    const citizenTaxes = {
+      "323298959": [
+        "2024: ₴5,200 paid",
+        "2023: ₴4,800 paid",
+        "2022: ₴5,000 paid"
+      ],
+      "135876440": [
+        "2024: ₴12,500,000 paid",
+        "2023: ₴14,855,250 paid",
+        "2022: ₴9,425,000 paid"
+      ],
+      "SC111222": [
+        "2024: ₴3,200 paid",
+        "2023: ₴3,100 paid",
+        "2022: ₴3,300 paid"
+      ]
+    };
+
+    // Get logged-in user's citizenship number
+    const id = localStorage.getItem("citizenshipNumber");
+    const taxList = document.getElementById("taxList");
+    const noRecords = document.getElementById("noRecords");
+
+    if(id && citizenTaxes[id]){
+      const records = citizenTaxes[id];
+      if(records.length === 0){
+        noRecords.classList.remove("hidden");
+      } else {
+        records.forEach(record => {
+          const li = document.createElement("li");
+          li.classList.add("bg-green-50", "p-4", "rounded-lg", "shadow-sm");
+          li.innerText = record;
+          taxList.appendChild(li);
+        });
+      }
+    } else if(id){
+      noRecords.classList.remove("hidden");
+    } else {
+      alert("No profile found! Redirecting to login.");
+      window.location.href = "login.html";
+    }
+
+    feather.replace();
+  </script>
+
+</body>
+</html>

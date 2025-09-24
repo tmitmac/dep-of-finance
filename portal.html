@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Citizen Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: linear-gradient(135deg, #0f766e 0%, #115e59 100%);
+    }
+  </style>
+</head>
+<body class="min-h-screen text-gray-800">
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-teal-700">Citizen Portal</h1>
+      <button id="logoutBtn" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">
+        Logout
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="max-w-5xl mx-auto mt-10 p-6 bg-white rounded-2xl shadow-lg">
+    <h2 class="text-2xl font-bold text-gray-800 mb-4">Welcome, <span id="userName"></span> 👋</h2>
+    <p class="text-gray-600 mb-8">Access your government services and personal information below.</p>
+
+    <!-- Dashboard Cards -->
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Profile -->
+      <div class="bg-teal-50 border border-teal-200 p-6 rounded-xl shadow hover:shadow-md transition">
+        <h3 class="text-lg font-semibold text-teal-800 mb-2">My Profile</h3>
+        <p class="text-gray-600 mb-4">View and update your personal details.</p>
+        <a href="profile.html" class="text-teal-700 font-medium hover:underline">Go to Profile →</a>
+      </div>
+
+      <!-- Services -->
+      <div class="bg-teal-50 border border-teal-200 p-6 rounded-xl shadow hover:shadow-md transition">
+        <h3 class="text-lg font-semibold text-teal-800 mb-2">Services</h3>
+        <p class="text-gray-600 mb-4">Access online services such as voting, tax, and healthcare.</p>
+        <a href="services.html" class="text-teal-700 font-medium hover:underline">View Services →</a>
+      </div>
+
+      <!-- Messages -->
+      <div class="bg-teal-50 border border-teal-200 p-6 rounded-xl shadow hover:shadow-md transition">
+        <h3 class="text-lg font-semibold text-teal-800 mb-2">Messages</h3>
+        <p class="text-gray-600 mb-4">Check official notifications and updates.</p>
+        <a href="messages.html" class="text-teal-700 font-medium hover:underline">Open Inbox →</a>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const profiles = {
+      "323298959": "Alice Thompson",
+      "SC654321": "Brian Lewis",
+      "SC111222": "Carla Mendoza"
+    };
+
+    const currentID = sessionStorage.getItem("currentID");
+    const userNameSpan = document.getElementById("userName");
+
+    if(currentID && profiles[currentID]){
+      userNameSpan.innerText = profiles[currentID];
+    } else {
+      userNameSpan.innerText = "Citizen";
+    }
+
+    document.getElementById("logoutBtn").addEventListener("click", () => {
+      localStorage.removeItem("rememberedUser");
+      sessionStorage.removeItem("currentID");
+      window.location.href = "login.html";
+    });
+  </script>
+</body>
+</html>

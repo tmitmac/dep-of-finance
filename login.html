@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Citizen Portal Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 100%);
+    }
+  </style>
+
+<body class="flex items-center justify-center h-screen font-sans">
+  <div class="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md">
+    <h1 class="text-2xl font-bold text-center text-gray-800 mb-6">Citizen Portal Login</h1>
+
+    <!-- Home Button -->
+<div class="absolute top-4 left-4">
+  <a href="index.html" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium">
+    Home
+  </a>
+</div>
+
+
+    <form id="loginForm" class="space-y-6">
+      <!-- Citizenship Number -->
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Citizenship Number</label>
+        <input type="text" id="citizenshipNumber" class="mt-1 block w-full px-3 py-2 border rounded-md focus:ring-blue-500 focus:border-blue-500" required>
+      </div>
+
+      <!-- Remember Me -->
+      <div class="flex items-center justify-between">
+        <label class="flex items-center">
+          <input type="checkbox" id="rememberMe" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+          <span class="ml-2 text-sm text-gray-600">Remember me</span>
+        </label>
+      </div>
+
+      <!-- Login Button -->
+      <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700">
+        Login
+      </button>
+    </form>
+
+    <p class="mt-6 text-center text-sm text-gray-600">
+      Don’t have a number? 
+      <a href="register.html" class="text-blue-600 hover:underline">Register here</a>
+    </p>
+  </div>
+
+  <script>
+    // Predetermined valid citizenship numbers
+    const validCitizens = ["323298959", "135876440", "849786600", "881260273", "753714165", "585095357", "387736111", "292999803", "719603844", "387817287"];
+
+    document.getElementById("loginForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      const id = document.getElementById("citizenshipNumber").value.trim();
+
+      if(validCitizens.includes(id)){
+        // Save to localStorage
+        localStorage.setItem("citizenshipNumber", id);
+
+        // Optionally remember user
+        if(document.getElementById("rememberMe").checked){
+          localStorage.setItem("rememberedUser", id);
+        }
+
+        // Go to portal page (same for all)
+        window.location.href = "portal.html";
+      } else {
+        alert("Invalid Citizenship Number!");
+      }
+    });
+  </script>
+</body>
+</html>
+

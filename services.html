@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Finance Services</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-green-700 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <div class="flex items-center">
+          <div class="w-10 h-10 rounded-md bg-green-600 flex items-center justify-center text-white">
+            <i data-feather="layers"></i>
+          </div>
+          <span class="ml-3 text-xl font-bold text-white">Finance Services</span>
+        </div>
+        <div>
+          <a href="login.html" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md text-sm font-medium">
+            Logout
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Services Section -->
+  <div class="max-w-6xl mx-auto mt-10">
+    <h2 class="text-2xl font-bold text-gray-900 mb-6">Department of Finance Services</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition">
+        <div class="flex items-center space-x-4 mb-4">
+          <i data-feather="file-text" class="text-green-600"></i>
+          <h3 class="text-lg font-semibold text-gray-900">Tax Filing</h3>
+        </div>
+        <p class="text-gray-600 mb-4">Submit your annual tax returns securely online.</p>
+        <a href="#" class="text-green-700 font-medium hover:underline">Access Service →</a>
+      </div>
+
+      <div class="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition">
+        <div class="flex items-center space-x-4 mb-4">
+          <i data-feather="credit-card" class="text-green-600"></i>
+          <h3 class="text-lg font-semibold text-gray-900">Make a Payment</h3>
+        </div>
+        <p class="text-gray-600 mb-4">Pay government fees, taxes, and fines online.</p>
+        <a href="payment.html" class="text-green-700 font-medium hover:underline">Access Service →</a>
+      </div>
+
+      <div class="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition">
+        <div class="flex items-center space-x-4 mb-4">
+          <i data-feather="pie-chart" class="text-green-600"></i>
+          <h3 class="text-lg font-semibold text-gray-900">Budget Information</h3>
+        </div>
+        <p class="text-gray-600 mb-4">View the national budget and government spending breakdown.</p>
+        <a href="#" class="text-green-700 font-medium hover:underline">Access Service →</a>
+      </div>
+
+      <div class="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition">
+        <div class="flex items-center space-x-4 mb-4">
+          <i data-feather="briefcase" class="text-green-600"></i>
+          <h3 class="text-lg font-semibold text-gray-900">Business Services</h3>
+        </div>
+        <p class="text-gray-600 mb-4">Register your business and file corporate taxes.</p>
+        <a href="#" class="text-green-700 font-medium hover:underline">Access Service →</a>
+      </div>
+
+      <div class="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition">
+        <div class="flex items-center space-x-4 mb-4">
+          <i data-feather="bar-chart" class="text-green-600"></i>
+          <h3 class="text-lg font-semibold text-gray-900">Financial Reports</h3>
+        </div>
+        <p class="text-gray-600 mb-4">Access annual financial statements and reports.</p>
+        <a href="#" class="text-green-700 font-medium hover:underline">Access Service →</a>
+      </div>
+
+      <div class="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition">
+        <div class="flex items-center space-x-4 mb-4">
+          <i data-feather="settings" class="text-green-600"></i>
+          <h3 class="text-lg font-semibold text-gray-900">Update Profile</h3>
+        </div>
+        <p class="text-gray-600 mb-4">Update your personal and contact information.</p>
+        <a href="profile.html" class="text-green-700 font-medium hover:underline">Go to Profile →</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    feather.replace();
+  </script>
+</body>
+</html>

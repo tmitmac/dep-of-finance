@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Citizen Profile</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+  <!-- Navbar -->
+  <nav class="bg-green-700 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <div class="flex items-center">
+          <div id="profileAvatar" class="w-10 h-10 rounded-md bg-green-600 flex items-center justify-center text-white font-bold">
+            C
+          </div>
+          <span class="ml-3 text-xl font-bold text-white">Citizen Portal</span>
+        </div>
+        <div>
+          <a href="login.html" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md text-sm font-medium">
+            Logout
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Profile Section -->
+  <div class="max-w-4xl mx-auto mt-10 bg-white shadow-md rounded-lg p-8">
+    <div class="flex items-center space-x-6">
+      <div id="profileInitial" class="w-24 h-24 bg-green-200 rounded-full flex items-center justify-center text-3xl font-bold text-green-700">
+        C
+      </div>
+      <div>
+        <h2 id="profileName" class="text-2xl font-bold text-gray-900">Citizen Name</h2>
+        <p class="text-gray-600">Citizenship Number: <span id="profileID" class="font-mono">SC000000</span></p>
+        <p id="profileEmail" class="text-gray-600">Email: example@example.com</p>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <a href="tax-records.html" class="p-6 bg-gray-50 rounded-lg shadow hover:bg-gray-100 flex items-center space-x-4">
+        <i data-feather="file-text" class="text-green-600"></i>
+        <span class="font-medium text-gray-900">View Tax Records</span>
+      </a>
+      <a href="payment.html" class="p-6 bg-gray-50 rounded-lg shadow hover:bg-gray-100 flex items-center space-x-4">
+        <i data-feather="credit-card" class="text-green-600"></i>
+        <span class="font-medium text-gray-900">Make a Payment</span>
+      </a>
+      <a href="#" class="p-6 bg-gray-50 rounded-lg shadow hover:bg-gray-100 flex items-center space-x-4">
+        <i data-feather="settings" class="text-green-600"></i>
+        <span class="font-medium text-gray-900">Update Profile</span>
+      </a>
+      <a href="support.html" class="p-6 bg-gray-50 rounded-lg shadow hover:bg-gray-100 flex items-center space-x-4">
+        <i data-feather="help-circle" class="text-green-600"></i>
+        <span class="font-medium text-gray-900">Support</span>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    // Predefined citizen data
+    const citizenData = {
+      "323298959": { name: "Hayden Pullar", email: "haydenpullar83@gmail.com", initial: "H" },
+      "135876440": { name: "Ryan Parker", email: "parkerryan466@gmail.com.com", initial: "R" },
+      "849786600": { name: "Trent McKenzie", email: "trentmckenzie09@outlook.com", initial: "T" },
+      "881260273": { name: "Campbell Craw", email: "campbellcraw@example.com", initial: "T" },
+      "753714165": { name: "Eden Glencross", email: "edenglencross@example.com", initial: "E" },
+      "585095357": { name: "Layton Cox", email: "laytoncox@example.com", initial: "L" },
+      "387736111": { name: "Esme Hopkins", email: "esmehopkins@example.com", initial: "E" },
+      "292999803": { name: "Izzy Steele", email: "izzysteele@example.com", initial: "I" },
+      "719603844": { name: "Tovah Fitzgerald", email: "tovahfitzgerald@example.com", initial: "T" },
+      "387817287": { name: "Abbey Parker", email: "abbeyparker@example.com", initial: "A" },
+    };
+
+    const id = localStorage.getItem("citizenshipNumber");
+
+    if(id && citizenData[id]){
+      const data = citizenData[id];
+      document.getElementById("profileName").innerText = data.name;
+      document.getElementById("profileID").innerText = id;
+      document.getElementById("profileEmail").innerText = `Email: ${data.email}`;
+      document.getElementById("profileInitial").innerText = data.initial;
+      document.getElementById("profileAvatar").innerText = data.initial;
+    } else {
+      alert("No profile found! Redirecting to login.");
+      window.location.href = "login.html";
+    }
+
+    feather.replace();
+  </script>
+</body>
+</html>
